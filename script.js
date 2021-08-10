@@ -11,7 +11,7 @@ function showError(input, message){
     small.innerText = message;
 }
 
-function showSuccress(input){
+function showSuccess(input){
     const formControl = input.parentElement;
     formControl.className = "form-control success";
 }
@@ -22,6 +22,26 @@ form.addEventListener("submit", function(e) {
     if(username.value === ""){
         showError(username, "Username is required.");
     } else {
-        showSuccress(username);
+        showSuccess(username);
     }
+
+    if(email.value === ""){
+        showError(email, "Email is required.");
+    } else {
+        showSuccess(email);
+    }
+
+    if(password.value === ""){
+        showError(password, "Password is required.");
+    } else {
+        showSuccess(password);
+    }
+
+    if(password2.value === ""){
+        showError(password2, "Password 2 is required.");
+    } else {
+        showSuccess(password2);
+    }
+
+
 })
